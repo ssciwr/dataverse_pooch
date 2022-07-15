@@ -48,14 +48,7 @@ def create(server=None, doi=None, **pooch_args):
 
     # Traverse the individual files
     for filedata in metadata["data"]["latestVersion"]["files"]:
-        # Whitespace in filenames does not work with pooch
         filename = filedata["dataFile"]["filename"]
-        if " " in filename:
-            print(
-                f"Skipping file {filename} because of spaces in file name (not supported by pooch)"
-            )
-            continue
-
         filehash = f"md5:{filedata['dataFile']['md5']}"
         fileurl = server._replace(
             path="/api/access/datafile/:persistentId",
