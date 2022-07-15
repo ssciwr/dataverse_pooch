@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dataverse_pooch"
-version = "0.1.0"
+version = "0.1.1"
 description = "Create pooch registry files from DataVerse repositories"
 readme = "README.md"
 maintainers = [

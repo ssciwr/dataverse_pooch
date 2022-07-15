@@ -8,3 +8,6 @@ def test_heidata():
     )
 
     assert os.path.exists(nakadake.fetch("nkd_fpl_slope_LT.json"))
+
+    # Also assert a filename with a space
+    assert os.path.exists(nakadake.fetch("How To - Minimal Workflow.pdf"))
